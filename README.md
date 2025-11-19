@@ -53,53 +53,47 @@ Sugerencia de estructura mínima:
 
 Abre `index.html` en tu navegador para verificar que carga (aunque se vea en blanco).
 
-### Paso 1: Agrega un título visible de la página
-Dentro del `<body>`, arriba, escribe un encabezado principal:
-```html
-<h1>Formulario de registro a PUCE Banco</h1>
-```
-
-### Paso 2: Crea el formulario vacío
-Debajo del `<h1>`, crea un formulario con `action="#"` (no enviará a ningún servidor) y `method="post"`.
+### Paso 1: Crea el formulario vacío
+Debajo del comentario, crea un formulario con `action="#"` (no enviará a ningún servidor) y `method="post"`.
 ```html
 <form action="#" method="post">
   <!-- Campos irán aquí -->
 </form>
 ```
 
-### Paso 3: Campo 1 — Nombre
+### Paso 2: Campo 1 — Nombre
 Agrega una etiqueta y un campo de texto obligatorio.
 ```html
 <label for="nombre">Nombre:</label>
 <input id="nombre" name="nombre" type="text" placeholder="Nombre del cliente" required />
 ```
 
-### Paso 4: Campo 2 — Apellido Paterno
+### Paso 3: Campo 2 — Apellido Paterno
 ```html
 <label for="apellidoPaterno">Apellido Paterno:</label>
 <input id="apellidoPaterno" name="apellidoPaterno" type="text" placeholder="Apellido paterno del cliente" required />
 ```
 
-### Paso 5: Campo 3 — Apellido Materno
+### Paso 4: Campo 3 — Apellido Materno
 ```html
 <label for="apellidoMaterno">Apellido Materno:</label>
 <input id="apellidoMaterno" name="apellidoMaterno" type="text" placeholder="Apellido materno del cliente" required />
 ```
 
-### Paso 6: Campo 4 — Número de cédula
+### Paso 5: Campo 4 — Número de cédula
 Para principiantes, mantenlo como texto.
 ```html
 <label for="cedula">Número de cédula:</label>
 <input id="cedula" name="cedula" type="text" placeholder="Número de cédula del cliente" required />
 ```
 
-### Paso 7: Campo 5 — Motivo de apertura de cuenta (texto largo)
+### Paso 6: Campo 5 — Motivo de apertura de cuenta (texto largo)
 ```html
 <label for="motivo">Motivo de apertura de cuenta:</label><br />
 <textarea id="motivo" name="motivo" rows="4" cols="40" placeholder="Motivo de apertura de cuenta del cliente" required></textarea>
 ```
 
-### Paso 8: Campo 6 — Tipo de cuenta (lista desplegable)
+### Paso 7: Campo 6 — Tipo de cuenta (lista desplegable)
 Incluye una opción vacía al inicio.
 ```html
 <label for="tipoCuenta">Tipo de cuenta:</label>
@@ -110,7 +104,7 @@ Incluye una opción vacía al inicio.
 </select>
 ```
 
-### Paso 9: Campo 7 — Dirección de domicilio (grupo de campos)
+### Paso 8: Campo 7 — Dirección de domicilio (grupo de campos)
 Usa `fieldset` y `legend` para agrupar. Dentro agrega tres inputs.
 ```html
 <fieldset>
@@ -128,13 +122,13 @@ Usa `fieldset` y `legend` para agrupar. Dentro agrega tres inputs.
 </fieldset>
 ```
 
-### Paso 10: Campo 8 — Foto (archivo)
+### Paso 9: Campo 8 — Foto (archivo)
 ```html
 <label for="foto">Cargar foto:</label>
 <input id="foto" name="foto" type="file" accept="image/*" />
 ```
 
-### Paso 11: Botón — Confirmar
+### Paso 10: Botón — Confirmar
 ```html
 <button type="submit">Confirmar</button>
 ```
@@ -174,7 +168,6 @@ El sistema evaluará automáticamente todos los campos del formulario y mostrar�
 
 ### Distribución de puntos:
 - 1 punto: Estructura HTML básica
-- 0.5 puntos: Título y encabezado
 - 0.5 puntos: Formulario con action y method
 - 1 punto: Campo Nombre
 - 1 punto: Campos Apellidos
@@ -190,7 +183,6 @@ El sistema evaluará automáticamente todos los campos del formulario y mostrar�
 Si subes tu trabajo a GitHub, las pruebas se ejecutarán automáticamente en cada push. Verás los resultados en la pestaña "Actions" de tu repositorio.
 
 ## Lista de verificación (Checklist)
-- [ ] La página tiene el título y el encabezado correctos.
 - [ ] Todos los campos solicitados están presentes.
 - [ ] Cada campo tiene su **label**.
 - [ ] Los campos principales son **required** (obligatorios).

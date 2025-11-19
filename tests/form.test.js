@@ -36,21 +36,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 2: Título y encabezado (0.5 puntos)
-  describe('2. Título y encabezado (0.5 puntos)', () => {
-    test('Debe tener un h1 con el título del formulario', () => {
-      const h1s = document.querySelectorAll('h1');
-      expect(h1s.length).toBeGreaterThan(0);
-      
-      const formularioH1 = Array.from(h1s).find(h1 => 
-        h1.textContent.match(/formulario.*registro.*banco/i)
-      );
-      expect(formularioH1).toBeTruthy();
-    });
-  });
-
-  // Prueba 3: Formulario existe (0.5 puntos)
-  describe('3. Formulario existe (0.5 puntos)', () => {
+  // Prueba 2: Formulario existe (0.5 puntos)
+  describe('2. Formulario existe (0.5 puntos)', () => {
     test('Debe existir un elemento form', () => {
       const form = document.querySelector('form');
       expect(form).toBeTruthy();
@@ -63,8 +50,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 4: Campo Nombre (1 punto)
-  describe('4. Campo Nombre (1 punto)', () => {
+  // Prueba 3: Campo Nombre (1 punto)
+  describe('3. Campo Nombre (1 punto)', () => {
     test('Debe existir un input con id="nombre"', () => {
       const input = document.querySelector('#nombre');
       expect(input).toBeTruthy();
@@ -83,8 +70,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 5: Campos Apellidos (1 punto)
-  describe('5. Campos Apellidos (1 punto)', () => {
+  // Prueba 4: Campos Apellidos (1 punto)
+  describe('4. Campos Apellidos (1 punto)', () => {
     test('Debe existir input con id="apellidoPaterno"', () => {
       const input = document.querySelector('#apellidoPaterno');
       expect(input).toBeTruthy();
@@ -107,8 +94,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 6: Campo Cédula (1 punto)
-  describe('6. Campo Cédula (1 punto)', () => {
+  // Prueba 5: Campo Cédula (1 punto)
+  describe('5. Campo Cédula (1 punto)', () => {
     test('Debe existir input con id="cedula"', () => {
       const input = document.querySelector('#cedula');
       expect(input).toBeTruthy();
@@ -121,8 +108,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 7: Campo Motivo (1 punto)
-  describe('7. Campo Motivo de apertura (1 punto)', () => {
+  // Prueba 6: Campo Motivo (1 punto)
+  describe('6. Campo Motivo de apertura (1 punto)', () => {
     test('Debe existir textarea con id="motivo"', () => {
       const textarea = document.querySelector('#motivo');
       expect(textarea).toBeTruthy();
@@ -136,8 +123,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 8: Campo Tipo de cuenta (1 punto)
-  describe('8. Campo Tipo de cuenta (1 punto)', () => {
+  // Prueba 7: Campo Tipo de cuenta (1 punto)
+  describe('7. Campo Tipo de cuenta (1 punto)', () => {
     test('Debe existir select con id="tipoCuenta"', () => {
       const select = document.querySelector('#tipoCuenta');
       expect(select).toBeTruthy();
@@ -160,8 +147,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 9: Campos de Dirección (1 punto)
-  describe('9. Campos de Dirección de domicilio (1 punto)', () => {
+  // Prueba 8: Campos de Dirección (1 punto)
+  describe('8. Campos de Dirección de domicilio (1 punto)', () => {
     test('Debe existir fieldset con legend para dirección', () => {
       const fieldset = document.querySelector('fieldset');
       expect(fieldset).toBeTruthy();
@@ -200,8 +187,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 10: Campo Foto (1 punto)
-  describe('10. Campo Foto (1 punto)', () => {
+  // Prueba 9: Campo Foto (1 punto)
+  describe('9. Campo Foto (1 punto)', () => {
     test('Debe existir input type="file" con id="foto"', () => {
       const input = document.querySelector('#foto');
       expect(input).toBeTruthy();
@@ -221,8 +208,8 @@ describe('Laboratorio 3 - Formulario de registro a PUCE Banco', () => {
     });
   });
 
-  // Prueba 11: Botón Confirmar (1 punto)
-  describe('11. Botón Confirmar (1 punto)', () => {
+  // Prueba 10: Botón Confirmar (1 punto)
+  describe('10. Botón Confirmar (1 punto)', () => {
     test('Debe existir un botón de tipo submit', () => {
       const button = document.querySelector('button[type="submit"]');
       expect(button).toBeTruthy();
