@@ -105,13 +105,16 @@ jobs:
         SCORE="${{ steps.results.outputs.score }}"
         PERCENTAGE="${{ steps.results.outputs.percentage }}"
         
-        if (( $(echo "$SCORE >= 9" | bc -l) )); then
+        # Convertir a entero para comparación (multiplicar por 10 para mantener un decimal)
+        SCORE_INT=$(echo "$SCORE * 10" | awk '{printf "%.0f", $1}')
+        
+        if [ "$SCORE_INT" -ge 90 ]; then
           COLOR="brightgreen"
           MESSAGE="Excelente"
-        elif (( $(echo "$SCORE >= 7" | bc -l) )); then
+        elif [ "$SCORE_INT" -ge 70 ]; then
           COLOR="green"
           MESSAGE="Muy Bien"
-        elif (( $(echo "$SCORE >= 5" | bc -l) )); then
+        elif [ "$SCORE_INT" -ge 50 ]; then
           COLOR="yellow"
           MESSAGE="Aprobado"
         else
@@ -146,13 +149,16 @@ jobs:
           PASSED=$(cat calificacion.json | jq -r '.testsPassed')
           TOTAL=$(cat calificacion.json | jq -r '.testsTotal')
           
-          if (( $(echo "$SCORE >= 9" | bc -l) )); then
+          # Convertir a entero para comparación (multiplicar por 10)
+          SCORE_INT=$(echo "$SCORE * 10" | awk '{printf "%.0f", $1}')
+          
+          if [ "$SCORE_INT" -ge 90 ]; then
             EMOJI="🌟"
             MENSAJE="¡EXCELENTE! Has dominado el laboratorio."
-          elif (( $(echo "$SCORE >= 7" | bc -l) )); then
+          elif [ "$SCORE_INT" -ge 70 ]; then
             EMOJI="👍"
             MENSAJE="¡MUY BIEN! Buen trabajo."
-          elif (( $(echo "$SCORE >= 5" | bc -l) )); then
+          elif [ "$SCORE_INT" -ge 50 ]; then
             EMOJI="📚"
             MENSAJE="APROBADO. Revisa los puntos fallidos."
           else
@@ -182,7 +188,8 @@ jobs:
       run: |
         if [ -f calificacion.json ]; then
           SCORE=$(cat calificacion.json | jq -r '.score')
-          if (( $(echo "$SCORE < 5" | bc -l) )); then
+          SCORE_INT=$(echo "$SCORE * 10" | awk '{printf "%.0f", $1}')
+          if [ "$SCORE_INT" -lt 50 ]; then
             echo "❌ Calificación insuficiente: $SCORE/10"
             exit 1
           fi
