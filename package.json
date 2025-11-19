@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "jest --verbose",
-    "grade": "jest --verbose --json --outputFile=test-results.json && node grader.js"
+    "grade": "node run-grade.js"
   },
   "keywords": ["html", "forms", "lab"],
   "author": "",

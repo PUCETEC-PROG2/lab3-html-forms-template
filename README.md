@@ -165,53 +165,29 @@ Este laboratorio incluye un sistema de autocalificación sobre **10 puntos**. Pa
 npm install
 ```
 
-2. Ejecuta la autocalificación:
+2. Ejecuta las pruebas:
 ```bash
 npm run grade
 ```
 
-El sistema evaluará:
-- **1 punto**: Estructura HTML básica (DOCTYPE, html, head, body, charset, viewport, title)
-- **0.5 puntos**: Título y encabezado de la página
-- **0.5 puntos**: Formulario con action y method
-- **1 punto**: Campo Nombre (input con label, type, required)
-- **1 punto**: Campos Apellidos (apellido paterno y materno con labels)
-- **1 punto**: Campo Cédula (input con label y required)
-- **1 punto**: Campo Motivo (textarea con label y required)
-- **1 punto**: Campo Tipo de cuenta (select con opciones Ahorros/Corriente)
-- **1 punto**: Dirección de domicilio (fieldset con calle, número e intersección)
-- **1 punto**: Campo Foto (input type="file" con accept="image/*")
-- **1 punto**: Botón Confirmar (button type="submit")
+El sistema evaluará automáticamente todos los campos del formulario y mostrará qué pruebas pasaron y cuáles fallaron.
 
-Los resultados se guardarán en `calificacion.json` con el desglose completo.
+### Distribución de puntos:
+- 1 punto: Estructura HTML básica
+- 0.5 puntos: Título y encabezado
+- 0.5 puntos: Formulario con action y method
+- 1 punto: Campo Nombre
+- 1 punto: Campos Apellidos
+- 1 punto: Campo Cédula
+- 1 punto: Campo Motivo
+- 1 punto: Tipo de cuenta (select)
+- 1 punto: Dirección de domicilio
+- 1 punto: Campo Foto
+- 1 punto: Botón Confirmar
 
 ## Autocalificación en GitHub Actions
 
-Si subes tu trabajo a GitHub, la autocalificación se ejecutará automáticamente:
-
-### Configuración inicial:
-1. Crea un repositorio en GitHub
-2. Sube tu código:
-```bash
-git add .
-git commit -m "Laboratorio 3 completado"
-git push origin main
-```
-
-### Funcionalidades:
-- ✅ **Autocalificación automática** en cada push
-- 📊 **Reporte visual** en la pestaña Actions
-- 💬 **Comentarios automáticos** en Pull Requests
-- 📥 **Reportes descargables** como artefactos (90 días)
-- 🏷️ **Badges de calificación** generados automáticamente
-
-### Ver resultados:
-1. Ve a la pestaña **Actions** de tu repositorio
-2. Selecciona la ejecución más reciente
-3. Verás tu calificación en el resumen
-4. Descarga el reporte completo desde "Artifacts"
-
-El workflow fallará (❌) si obtienes menos de 5 puntos, ayudándote a identificar trabajo incompleto.
+Si subes tu trabajo a GitHub, las pruebas se ejecutarán automáticamente en cada push. Verás los resultados en la pestaña "Actions" de tu repositorio.
 
 ## Lista de verificación (Checklist)
 - [ ] La página tiene el título y el encabezado correctos.
