@@ -1,0 +1,19 @@
+{
+  "name": "lab3-formulario-banco",
+  "version": "1.0.0",
+  "description": "Laboratorio 3 - Formulario de registro a PUCE Banco",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest --verbose",
+    "grade": "jest --verbose --json --outputFile=test-results.json && node grader.js"
+  },
+  "keywords": ["html", "forms", "lab"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/dom": "^9.3.4",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^24.0.0"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+test-results.json
+calificacion.json
+package-lock.json
